@@ -50,7 +50,7 @@ int main()
 
 
 
-		for (size_t i = 0; i, vertices.size(); i++)
+		for (size_t i = 0; i < vertices.size(); i++)
 		{
 			shape.setPosition(vertices.at(i));
 			window.draw(shape);
