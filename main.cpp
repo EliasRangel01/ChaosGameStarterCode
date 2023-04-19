@@ -41,24 +41,26 @@ int main()
 				window.close();
 			if (event.type == sf::Event::MouseButtonPressed)
 			{
-				if (event.mouseButton.button == sf::Mouse::Left && vertices.size() < 3)
+				if (event.mouseButton.button == sf::Mouse::Left && vertices.size() < 3 )
 				{
 
 					Vector2i pixelPos = { event.mouseButton.x, event.mouseButton.y };
 					Vector2f worldPos = window.mapPixelToCoords(pixelPos, view);
-					vertices.push_back(worldPos);
+					vertices.push_back(worldPos); 
 
 					//vertices.push_back(Vector2f((float)event.mouseButton.x,
 					//	(float)event.mouseButton.y));
 				}
 				if (event.mouseButton.button == sf::Mouse::Left && points.size() > 0)
 				{
+
 					for (size_t i = 0; i < 100; i++)
 					{
+						Vector2f newPoint;
 
-						Vector2i pixelPos = { event.mouseButton.x, event.mouseButton.y };
-						Vector2f worldPos = window.mapPixelToCoords(pixelPos, view);
-						points.push_back(worldPos);
+						//Vector2i pixelPos = { event.mouseButton.x, event.mouseButton.y };
+						//Vector2f worldPos = window.mapPixelToCoords(pixelPos, view);
+						//points.push_back(worldPos);
 					}
 
 				}
